@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+/* Vars */
+:root {
+    --primary-bg: #047aed; 
+}
 /* Default */
-*{
+* {
     box-sizing: border-box;
     margin: 0; padding: 0;
 }
 
-body{
+body {
     font-family: 'Lato', sans-serif;
     color: #333;
     line-height: 1.6;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #333;
 }
@@ -27,50 +31,79 @@ h1, h2 {
     margin: 10px 0;
 }
 
-p{
+p {
     margin: 10px 0;
 }
 
-img{
+img {
     width: 100%;
 }
 
-/* Container */
-.container{
+/* Utilities */
+.container {
     max-width: 1100px;
     margin: 0 auto;
+    /* If will be overflowing */
     overflow: auto;
     padding: 0 40px;
 }
-/* NavBar */
-.navbar{
-    background-color: #047aed;
-    color: #fff;
-    height: 70px;
-}
 
-.navbar .flex{
-    justify-content: space-between;
-}
-
-.navbar ul{
-    display: flex;
-}
-
-.navbar a{
-    color: #fff;
-    padding: 10px;
-    margin: 0 5px;
-}
-
-.navbar a:hover{
-    border-bottom: 2px #fff solid;
-}
-
-.flex{
+.flex {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+/* NavBar */
+.navbar {
+    background-color: var(--primary-bg);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+/* Showcase */
+.showcase {
+    background-color: var(--primary-bg);
+    color: #fff;
+    height: 400px;
+}
+
+.showcase .grid {
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
