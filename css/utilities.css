@@ -1,0 +1,27 @@
+/* Utilities */
+/* 
+    I need to use height: 100% to strech content. 
+*/
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    /* If will be overflowing */
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
