@@ -75,15 +75,24 @@ img {
 
 .showcase::before,
 .showcase::after {
-    display: block;
-    content: 'd';
+    /* ::after and ::before element don't visible
+        without left: and right:. I thing this happens
+        because it has width is equaled 0.
+    */
+    content: '';
     position: absolute;
     height: 100px;
     bottom: -70px;
-    /* right: 0;
-    left: 0; */
-    z-index: 1000;
-    background: red;
+    right: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    /* If deg is positive the offset is did down
+    negative up
+    */
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
 }
 
 .showcase .grid {
