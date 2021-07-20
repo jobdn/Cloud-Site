@@ -2,7 +2,7 @@
 
 /* Vars */
 :root {
-    --primary-bg: #047aed; 
+    --primary-bg: #047aed;
 }
 /* Default */
 * {
@@ -10,9 +10,7 @@
     margin: 0; padding: 0;
 }
 
-
 body{
-
     font-family: 'Lato', sans-serif;
     color: #333;
     line-height: 1.6;
@@ -34,7 +32,6 @@ h1, h2 {
     margin: 10px 0;
 }
 
-
 p {
     margin: 10px 0;
 }
@@ -48,7 +45,6 @@ img {
     color: #fff;
     height: 70px;
 }
-
 
 .navbar .flex {
     justify-content: space-between;
@@ -73,9 +69,25 @@ img {
     background-color: var(--primary-bg);
     color: #fff;
     height: 400px;
+    /* For ::after and ::before elements*/
+    position: relative;
+}
+
+.showcase::before,
+.showcase::after {
+    display: block;
+    content: 'd';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    /* right: 0;
+    left: 0; */
+    z-index: 1000;
+    background: red;
 }
 
 .showcase .grid {
+    overflow: visible;
     grid-template-columns: 55% 45%;
     gap: 30px;
 }
@@ -86,4 +98,30 @@ img {
 
 .showcase p {
     margin: 20px 0;
+}
+
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.form-control input[type="text"],
+.form-control input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid  #b4becd;
+    width: 100%;
+    padding: 3px;
+    font-size: 1rem;
+}
+
+.form-control input:focus{
+    outline: none;
 }
