@@ -134,3 +134,8 @@ img {
 .form-control input:focus{
     outline: none;
 }
+
+/* Stats */
+.stats {
+    padding-top: 100px;
+}
