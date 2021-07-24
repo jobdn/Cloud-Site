@@ -192,3 +192,14 @@ img {
 .languages .card:hover{
     transform: translateY(-15px);
 }
+
+/* Footer */
+
+.footer .social a {
+    margin: 10px;
+}
+
+/* Tableta and under */
+
+
+/* Mobile */
