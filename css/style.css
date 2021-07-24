@@ -2,7 +2,10 @@
 
 /* Vars */
 :root {
-    --primary-bg: #047aed;
+    --primary-color: #047aed;
+    --secondary-color: #1c3f28;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
 }
 /* Default */
 * {
@@ -41,7 +44,7 @@ img {
 }
 /* NavBar */
 .navbar {
-    background-color: var(--primary-bg);
+    background-color: var(--primary-color);
     color: #fff;
     height: 70px;
 }
@@ -66,7 +69,7 @@ img {
 
 /* Showcase */
 .showcase {
-    background-color: var(--primary-bg);
+    background-color: var(--primary-color);
     color: #fff;
     height: 400px;
     /* For ::after and ::before elements*/
@@ -164,4 +167,9 @@ img {
     border-radius: 10px;
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+}
+
+/* Cloud */
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
 }
