@@ -34,7 +34,7 @@
     transform: scale(0.98);
 }
 
-/* Backgrounds & colored botoons */
+/* Backgrounds & colored bottons */
 .bg-primary,
 .btn-primary {
     background-color: var(--primary-color);
