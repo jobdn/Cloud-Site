@@ -200,6 +200,39 @@ img {
 }
 
 /* Tableta and under */
+@media (max-width: 768px) {
+    .showcase .grid, 
+    .cli .grid,
+    .stats .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+    }
 
+    .showcase {
+        height: auto;
+    }
+
+    .showcase .showcase-text {
+        text-align: center;
+    }
+
+    .showcase .card {
+        justify-self: center;
+    }
+}
 
 /* Mobile */
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
