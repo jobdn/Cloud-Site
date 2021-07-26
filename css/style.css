@@ -196,6 +196,7 @@ img {
 /* Footer */
 
 .footer .social a {
+    display: inline-block;
     margin: 10px;
 }
 
@@ -206,6 +207,7 @@ img {
     .stats .grid,
     .cloud .grid {
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 
     .showcase {
@@ -219,6 +221,11 @@ img {
 
     .showcase .card {
         justify-self: center;
+    }
+
+    .cli .grid > *:first-child {
+        grid-column: 1;
+        grid-row: 1;
     }
 }
 
