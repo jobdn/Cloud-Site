@@ -34,6 +34,29 @@
     transform: scale(0.98);
 }
 
+.alert {
+    margin: 15px 0;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.alert i {
+    margin-right : 10px;
+}
+
+.alert-success {
+    background-color: var(--success-color);
+}
+
+.alert-error {
+    background-color: var(--error-color);
+}
+
+
+.alert-black {
+    background-color: black;
+    color: #999;
+}
 /* Backgrounds & colored bottons */
 .bg-primary,
 .btn-primary {

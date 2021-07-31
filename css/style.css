@@ -6,6 +6,8 @@
     --secondary-color: #1c3f28;
     --dark-color: #002240;
     --light-color: #f4f4f4;
+    --success-color: #5cd85c;
+    --error-color: #d9534f;
 }
 
 /* Default */
@@ -20,6 +22,7 @@ body {
     font-family: 'Lato', sans-serif;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 ul {
@@ -43,6 +46,13 @@ p {
 
 img {
     width: 100%;
+}
+
+pre, code {
+    background-color: #000;
+    color: #ccc;
+    padding: 10px;
+    font-weight: bold;
 }
 
 /* NavBar */
@@ -108,6 +118,10 @@ img {
     gap: 30px;
 }
 
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
 .showcase h1 {
     font-size: 40px;
 }
@@ -123,6 +137,7 @@ img {
     width: 400px;
     padding: 40px;
     z-index: 100;
+    animation: slideInFromRight 1s ease-in-out;
 }
 
 .showcase-form .form-control {
@@ -145,6 +160,7 @@ img {
 
 .stats {
     padding-top: 100px;
+    animation: slideInFromBottom 1s ease-in-out;
 }
 
 .stats-heading {
@@ -189,7 +205,6 @@ img {
 .languages .card {
     margin: 18px 10px 40px;
     transition: transform .2s ease-in;
-    ;
 }
 
 .languages .card .h4 {
@@ -202,11 +217,23 @@ img {
 }
 
 /* Features */
+.features-head .grid, 
+.docs-head .grid{ 
+    overflow-x: hidden;
+}
 
-.features-head img,
-.docs-head img {
+.features-head img, .docs-head img {
     width: 200px;
     justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.features-heading {
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.features-sub-head {
+    animation: slideInFromLeft 1s ease-in-out;
 }
 
 .features-sub-head img {
@@ -220,12 +247,39 @@ img {
     margin-right: 20px;
 }
 
-.features-main .grid > *:first-child {
+.features-main .grid>*:first-child {
     grid-column: 1 / span 3;
 }
 
-.features-main .grid > *:nth-child(2) {
+.features-main .grid>*:nth-child(2) {
     grid-column: 1 / span 2;
+}
+
+/* Docs */
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+    overflow-y: hidden;
+}
+
+.docs-main .card {
+    animation: slideInFromBottom 1s ease-in-out;;
+}
+
+.docs-heading {
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.docs-main nav li {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-size: 17px;
+}
+
+.docs-main nav li:hover {
+    font-weight: bold;
 }
 
 /* Footer */
@@ -235,26 +289,116 @@ img {
     margin: 10px;
 }
 
+/* Animation */
+@keyframes slideInFromLeft{
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight{
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop{
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom{
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
 /* Tableta and under */
 
 @media (max-width: 768px) {
-    .showcase .grid, .cli .grid, .stats .grid, .cloud .grid {
+    .showcase .grid,
+    .cli .grid,
+    .stats .grid,
+    .cloud .grid,
+    .docs-main .grid,
+    .features-main .grid,
+    .docs-head .grid,
+    .features-head .grid,
+    .features-sub-head .grid{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+    
     .showcase {
         height: auto;
     }
+
     .showcase .showcase-text {
         text-align: center;
         margin-top: 50px;
+        animation: slideInFromTop 1s ease-in-out;
     }
+
     .showcase .card {
         justify-self: center;
+        animation: slideInFromBottom 1s ease-in-out;
     }
+
     .cli .grid>*:first-child {
         grid-column: 1;
         grid-row: 1;
+    }
+
+    .docs-head .grid img,
+    .features-head .grid img,
+    .features-sub-head img{
+        justify-self: center;
+    }
+
+    .docs-head .grid,
+    .features-head .grid, 
+    .features-sub-head {
+        text-align: center;
+    }
+
+    /* If I would do only .features-main .grid > *:first-child OR .features-main .grid > *:nth:child I will have still two colums */
+     .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2) {
+        grid-column: 1 ;
+    } 
+
+    /* Features */
+    .features-head .container {
+        animation: slideInFromTop 1s ease-in-out;
+    }
+
+    .features-sub-head .container {
+        animation: slideInFromBottom 1s ease-in-out;
+    }
+
+    /* Docs */
+    .docs-head .container {
+        animation: slideInFromTop 1s ease-in-out;
+    }
+
+    .docs-main .grid > *:first-child{
+        animation: slideInFromBottom 1s ease-in-out;
     }
 }
 
