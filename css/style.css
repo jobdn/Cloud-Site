@@ -55,6 +55,11 @@ pre, code {
     font-weight: bold;
 }
 
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
 /* NavBar */
 
 .navbar {
